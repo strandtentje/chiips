@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="KeyboardUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="130" Height="64">
+	<UserControl.Triggers>
+	</UserControl.Triggers>
+    <Grid>
+        <Button Content="No Key" Height="23" HorizontalAlignment="Center" Name="Button1" VerticalAlignment="Center"  Width="75" />
+    </Grid>
+</UserControl>

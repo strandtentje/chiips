@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="Blip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Storyboard x:Key="On">
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF6EE665"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF39D425"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF338E21"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF85FF6E"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Off">
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFE66565"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFD42525"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF8E2121"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+                <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFFF6E6E"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+   </UserControl.Resources>
+        <Grid>
+        <Ellipse Stroke="#FF000000" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top"  StrokeThickness="0" x:Name="ellipse">
+            <Ellipse.OpacityMask>
+                <RadialGradientBrush>
+                    <GradientStop Color="#99000000" Offset="0"/>
+                    <GradientStop Color="#01FFFFFF" Offset="1"/>
+                    <GradientStop Color="#FF9D9D9D" Offset="0.821"/>
+                    <GradientStop Color="#4DF2F2F2" Offset="0.826"/>
+                </RadialGradientBrush>
+            </Ellipse.OpacityMask>
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <RadialGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.708" ScaleY="1.543"/>
+                            <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform X="0.154" Y="0.227"/>
+                        </TransformGroup>
+                    </RadialGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFD42525" Offset="0.652"/>
+                    <GradientStop Color="#FFE66565" Offset="0"/>
+                    <GradientStop Color="#FF8E2121" Offset="0.674"/>
+                    <GradientStop Color="#FFFF6E6E" Offset="1"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+    </Grid>
+</UserControl>

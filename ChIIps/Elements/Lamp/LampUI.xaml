@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="LampUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="130" Height="64">
+	<UserControl.Resources>
+		<RadialGradientBrush x:Key="Brush1">
+			<RadialGradientBrush.RelativeTransform>
+				<TransformGroup>
+					<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="5.148" ScaleY="5.148"/>
+					<SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+					<RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+					<TranslateTransform X="0.487" Y="1.12"/>
+				</TransformGroup>
+			</RadialGradientBrush.RelativeTransform>
+			<GradientStop Color="#FF000000" Offset="0"/>
+			<GradientStop Color="#FFADADAD" Offset="1"/>
+			<GradientStop Color="#FF797979" Offset="0.536"/>
+			<GradientStop Color="#FF555555" Offset="0.527"/>
+		</RadialGradientBrush>
+		<Storyboard x:Key="On">
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(UIElement.BitmapEffect).(OuterGlowBitmapEffect.Opacity)">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFB0B6BB"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF537A9B"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFAEC8DE"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FFF1F7FD"/>
+			</ColorAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Offset)">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.531"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="Off">
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(UIElement.BitmapEffect).(OuterGlowBitmapEffect.Opacity)">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF292929"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF333333"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF5B5B5B"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF5C5C5C"/>
+			</ColorAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Offset)">
+				<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.527"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+	<UserControl.Triggers>
+	</UserControl.Triggers>
+    <Grid>
+    	<Ellipse Stroke="{DynamicResource Brush1}" StrokeThickness="4" Margin="41,8,41,8" x:Name="ellipse" Width="48" Height="48">
+    		<Ellipse.BitmapEffect>
+    			<OuterGlowBitmapEffect GlowColor="#FFB1E5F1" GlowSize="4" Opacity="0"/>
+    		</Ellipse.BitmapEffect>
+    		<Ellipse.Fill>
+    			<RadialGradientBrush>
+    				<RadialGradientBrush.RelativeTransform>
+    					<TransformGroup>
+    						<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="5.148" ScaleY="5.148"/>
+    						<SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+    						<RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+    						<TranslateTransform X="0.487" Y="1.12"/>
+    					</TransformGroup>
+    				</RadialGradientBrush.RelativeTransform>
+    				<GradientStop Color="#FF292929" Offset="0"/>
+    				<GradientStop Color="#FF5C5C5C" Offset="1"/>
+    				<GradientStop Color="#FF5B5B5B" Offset="0.536"/>
+    				<GradientStop Color="#FF333333" Offset="0.527"/>
+    			</RadialGradientBrush>
+    		</Ellipse.Fill>
+    	</Ellipse>
+            
+    </Grid>
+</UserControl>

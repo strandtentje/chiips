@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Pushbutton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="130" Height="64">
+    <Grid>
+    	<Button Style="{DynamicResource SimpleButton}" Content="Hier Drukken" Margin="16,16,16,16" FontSize="12" BorderThickness="2,2,2,2" FontWeight="Bold" Height="Auto" VerticalAlignment="Stretch" x:Name="cmdKnop">
+    		<Button.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="#FFFFEE00" Offset="0"/>
+    				<GradientStop Color="#FF8D8300" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Button.Foreground>
+    		<Button.Background>
+    			<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+    				<GradientStop Color="#FF005EF1" Offset="0"/>
+    				<GradientStop Color="#FF00173A" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Button.Background>
+    		<Button.BorderBrush>
+    			<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+    				<GradientStop Color="#FF833E0B" Offset="0"/>
+    				<GradientStop Color="#FF332400" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Button.BorderBrush>
+    	</Button>
+            
+    </Grid>
+</UserControl>

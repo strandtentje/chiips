@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA392E4A-F1E0-47C4-8C29-7C0907DA9A1F}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ChIIps</RootNamespace>
+    <AssemblyName>ChIIps</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <Utf8Output>true</Utf8Output>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>true</IncrementalBuild>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ChIIps.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ChIIps.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InputSimulator">
+      <HintPath>..\..\..\Downloads\InputSimulator.0.1.0.0-bin\InputSimulator.0.1.0.0-bin\Release\InputSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WiimoteLib, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Downloads\WiimotLib_1.7\WiimotLib_1.7\WiimoteLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Page Include="Elements\Keyboard\KeyboardUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Elements\WiiMote\WiiMote.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Elements\Servo\ServoUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Elements\Motor\MotorUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\ValIn\ValInUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Elements\WiiMote\wiimote-762302.jpg" />
+    <Resource Include="Folder.png" />
+    <Resource Include="Load.png" />
+    <Resource Include="Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Application.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="ChIIpsMainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="connectionUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ElementContainer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Elements\Display\DisplayUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\Lamp\LampUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\Pushbutton\Pushbutton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\Timer\TimerUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Application.xaml.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Application.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChIIpsMainWindow.xaml.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>ChIIpsMainWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Shapes" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="connectionUI.xaml.vb">
+      <DependentUpon>connectionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\CompareElement.vb" />
+    <Compile Include="Elements\MouseElement.vb" />
+    <Compile Include="Elements\Keyboard\KeyboardClass.vb" />
+    <Compile Include="Elements\Keyboard\KeyboardUI.xaml.vb">
+      <DependentUpon>KeyboardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\IfElseElement.vb" />
+    <Compile Include="Elements\IncrementElement.vb" />
+    <Compile Include="Elements\IfElement.vb" />
+    <Compile Include="Elements\WiiMote\WiiMote.xaml.vb">
+      <DependentUpon>WiiMote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\WiiMote\WiiMoteClass.vb" />
+    <Compile Include="Elements\Servo\Servo.vb" />
+    <Compile Include="Elements\Servo\ServoUI.xaml.vb">
+      <DependentUpon>ServoUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Motor\Motor.vb" />
+    <Compile Include="Elements\Motor\MotorUI.xaml.vb">
+      <DependentUpon>MotorUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\SqrtElement.vb" />
+    <Compile Include="Elements\PowElement.vb" />
+    <Compile Include="Elements\ValIn\ValInUI.xaml.vb">
+      <DependentUpon>ValInUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\ValIn\ValOut.vb" />
+    <Compile Include="Elements\ValIn\ValIn.vb" />
+    <Compile Include="Elements\SubElement.vb" />
+    <Compile Include="Elements\AndElement.vb" />
+    <Compile Include="Elements\MulElement.vb" />
+    <Compile Include="Elements\DivElement.vb" />
+    <Compile Include="Elements\AddElement.vb" />
+    <Compile Include="Elements\Display\DisplayClass.vb" />
+    <Compile Include="Elements\Display\DisplayUI.xaml.vb">
+      <DependentUpon>DisplayUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Lamp\LampClass.vb" />
+    <Compile Include="Elements\Lamp\LampUI.xaml.vb">
+      <DependentUpon>LampUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\NotElement.vb" />
+    <Compile Include="Elements\Counter.vb" />
+    <Compile Include="Elements\OrElement.vb" />
+    <Compile Include="ElementContainer.xaml.vb">
+      <DependentUpon>ElementContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Pushbutton\Pushbutton.xaml.vb">
+      <DependentUpon>Pushbutton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Pushbutton\PushButtonClass.vb" />
+    <Compile Include="Elements\Timer\TimerClass.vb" />
+    <Compile Include="Elements\Timer\TimerUI.xaml.vb">
+      <DependentUpon>TimerUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWpfExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.WPF.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Wire.vb" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chip\Chip.vbproj">
+      <Project>{FD082A95-C8AC-4F66-B262-8F9E7FEFEA80}</Project>
+      <Name>Chip</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

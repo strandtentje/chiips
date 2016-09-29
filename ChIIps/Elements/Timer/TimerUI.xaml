@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="TimerUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="130" Height="48" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <Grid>
+            
+    	<Slider Margin="0,28,0,4" x:Name="sldInterval" Style="{DynamicResource SimpleSlider}" VerticalAlignment="Stretch" Maximum="2000" Minimum="10" Value="500"/>
+    	<Label HorizontalAlignment="Center" Margin="0,4,0,20.723" x:Name="lblStatus" Content="Interval: 500 ms" Foreground="#FFFFFFFF" d:LayoutOverrides="Height"/>
+            
+    </Grid>
+</UserControl>

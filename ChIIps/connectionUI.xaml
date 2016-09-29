@@ -1,0 +1,28 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="connectionUI"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="100" Height="20">
+    
+	<Grid x:Name="LayoutRoot">
+		<Ellipse Stroke="#FF000000" Width="16" Height="16" Margin="2,2,0,0" HorizontalAlignment="Left" x:Name="ellipse">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="Red"/>
+            </Ellipse.Fill>
+		</Ellipse>
+		<Label VerticalAlignment="Top" Content="OutputInput" Margin="20,-1,0,0" x:Name="lblName" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" IsHitTestVisible="False" Height="42" Foreground="Black">
+			<Label.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="1" ScaleY="1"/>
+					<SkewTransform AngleX="0" AngleY="0"/>
+					<RotateTransform Angle="0"/>
+					<TranslateTransform X="0" Y="0"/>
+				</TransformGroup>
+			</Label.RenderTransform>
+		</Label>
+	</Grid>
+</UserControl>

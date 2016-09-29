@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="ValInUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Height="48" Width="130">
+            <Grid>
+                <TextBox Height="23" HorizontalAlignment="Center" Name="txtVal" VerticalAlignment="Center" Width="120" />
+            </Grid>
+</UserControl>
