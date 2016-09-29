@@ -1,6 +1,8 @@
-﻿Partial Public Class KeyboardUI
+﻿Imports WindowsInput.Native
 
-    Public keyPressed As WindowsInput.VirtualKeyCode
+Partial Public Class KeyboardUI
+
+    Public keyPressed As VirtualKeyCode
 
     Private Sub Button1_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Input.KeyEventArgs) Handles Button1.KeyUp
         keyPressed = e.Key + 21

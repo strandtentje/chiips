@@ -15,6 +15,13 @@ Public Class Servo
         Inputs.Add("X")
         Inputs.Add("Y")
         Inputs.Add("Z")
+
+        Try
+            Port = New SerialPort("COM5", 115200, IO.Ports.Parity.None, _
+                               8, IO.Ports.StopBits.One)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "You are not connected to any robotic arms are you")
+        End Try
     End Sub
 
     Public Overrides ReadOnly Property Name() As String
@@ -32,8 +39,7 @@ Public Class Servo
         End Get
     End Property
 
-    Dim Port As New SerialPort("COM5", 115200, IO.Ports.Parity.None, _
-                               8, IO.Ports.StopBits.One)
+    Dim Port As SerialPort
 
     Dim WithEvents timMove As New DispatcherTimer() With {.Interval = New TimeSpan(0, 0, 0, 0, 50)}
 

@@ -37,11 +37,31 @@
     <DocumentationFile>ChIIps.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>ChIIps.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>ChIIps.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="InputSimulator">
-      <HintPath>..\..\..\Downloads\InputSimulator.0.1.0.0-bin\InputSimulator.0.1.0.0-bin\Release\InputSimulator.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="SlimDX, Version=2.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
+      <HintPath>..\packages\SlimDX.4.0.13.44\lib\NET20\SlimDX.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -58,7 +78,7 @@
     </Reference>
     <Reference Include="WiimoteLib, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Downloads\WiimotLib_1.7\WiimotLib_1.7\WiimoteLib.dll</HintPath>
+      <HintPath>..\packages\WiimoteLib.1.7\lib\WiimoteLib.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
@@ -96,7 +116,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Resource Include="Elements\WiiMote\wiimote-762302.jpg" />
+    <Reference Include="WindowsInput">
+      <HintPath>..\packages\InputSimulator.1.0.4.0\lib\net20\WindowsInput.dll</HintPath>
+    </Reference>
     <Resource Include="Folder.png" />
     <Resource Include="Load.png" />
     <Resource Include="Save.png" />
@@ -249,12 +271,26 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <AppDesigner Include="My Project\" />
+    <None Include="packages.config" />
+    <None Include="WiimoteLib_Extras\docs\WiimoteLib.chm" />
+    <None Include="WiimoteLib_Extras\samples.zip" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chip\Chip.vbproj">
       <Project>{FD082A95-C8AC-4F66-B262-8F9E7FEFEA80}</Project>
       <Name>Chip</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WiimoteLib_Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WiimoteLib_Extras\docs\copyright.txt" />
+    <Resource Include="WiimoteLib_Extras\docs\license.txt" />
+    <Content Include="WiimoteLib_Extras\MSRS\Wiimote.Y2007.M06.dll" />
+    <Content Include="WiimoteLib_Extras\MSRS\Wiimote.Y2007.M06.Proxy.dll" />
+    <Resource Include="WiimoteLib_Extras\MSRS\Wiimote.Y2007.M06.Proxy.xml" />
+    <Content Include="WiimoteLib_Extras\MSRS\Wiimote.Y2007.M06.Transform.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
